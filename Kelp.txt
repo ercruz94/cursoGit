@@ -1,4 +1,4 @@
-git log -> lista el hirtorial de commits del proyecto
+git log -> lista el hirtorial de commits de la rama en la que estamos parados
 git remote -v -> mustra el repositorio remoto
 git remote add origin -> asocia el repositorio remoto con uno local
 git clean -> limpia el working directory, es decir todos los archivos que no fueron pasados al staging area sern eliminados
@@ -6,3 +6,10 @@ git clean -n -> nos indica que archivos van a ser borrados si ejecutamos git cle
 archivos trackeados -> son aquyeloos archivos que no estan guardados en git , es decir no se ha realizado un commit para guardarlos en el repositorio local
 git checkout Kelp.txt -> elimina todos los cambios de un archivo que no se habian pasado al staging area, solo aplica para archivos trackeados
 git reset HEAD archivo3.txt -> baja los cambios del area de staging y los regresa al directorio local
+git revert "codigop del comit" -> elimina todos lo cambios que se realizaron a partir del commit especificado, incluyendo los de este , es decir 
+    si revertimos el commit n vamos a regresar al como estaba el repositorio despues de hacer el commit n-1
+git mv archivo6.txt nuevo_nombre ->  cambia el nombre de archivo6 a nuevo_nombre , elimina archivo6 y suve nuevo_nombre a stage
+git branch -> lista las ramas locales
+git branch nombreRama -> crea una nueva rama
+git branch -d nombreRama -> elimina la rama
+git branch -m nombreViejo nombreNuevo -> cambia el nombre de una rama
