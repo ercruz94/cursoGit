@@ -1,3 +1,4 @@
 git log -> lista el hirtorial de commits del proyecto
 git remote -v -> mustra el repositorio remoto
- git remote add origin -> asocia el repositorio remoto con uno local
+git remote add origin -> asocia el repositorio remoto con uno local
+git clean -> limpia el working directory, es decir todos los archivos que no fueron pasados al staging area sern eliminados
