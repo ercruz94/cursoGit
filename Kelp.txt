@@ -5,3 +5,4 @@ git clean -> limpia el working directory, es decir todos los archivos que no fue
 git clean -n -> nos indica que archivos van a ser borrados si ejecutamos git clean
 archivos trackeados -> son aquyeloos archivos que no estan guardados en git , es decir no se ha realizado un commit para guardarlos en el repositorio local
 git checkout Kelp.txt -> elimina todos los cambios de un archivo que no se habian pasado al staging area, solo aplica para archivos trackeados
+git reset HEAD archivo3.txt -> baja los cambios del area de staging y los regresa al directorio local
