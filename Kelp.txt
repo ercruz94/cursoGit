@@ -2,3 +2,6 @@ git log -> lista el hirtorial de commits del proyecto
 git remote -v -> mustra el repositorio remoto
 git remote add origin -> asocia el repositorio remoto con uno local
 git clean -> limpia el working directory, es decir todos los archivos que no fueron pasados al staging area sern eliminados
+git clean -n -> nos indica que archivos van a ser borrados si ejecutamos git clean
+archivos trackeados -> son aquyeloos archivos que no estan guardados en git , es decir no se ha realizado un commit para guardarlos en el repositorio local
+git checkout Kelp.txt -> elimina todos los cambios de un archivo que no se habian pasado al staging area, solo aplica para archivos trackeados
