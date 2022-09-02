@@ -1,4 +1,6 @@
 git log -> lista el hirtorial de commits de la rama en la que estamos parados
+git shortlog -> mustra lo mismo de arriba pero resumido (solo nombre y titulo d elos commits)
+git shortlog --summary --numbered - > muestra cuantos commits ha realizado cada usuario
 git remote -v -> mustra el repositorio remoto
 git remote add origin -> asocia el repositorio remoto con uno local
 git clean -> limpia el working directory, es decir todos los archivos que no fueron pasados al staging area sern eliminados
@@ -17,7 +19,7 @@ git branch -m nombreViejo nombreNuevo -> cambia el nombre de una rama
 git checkout identificadorCommit -> cambiara el head al comit especificado y por lo tanto podremos ver el codigo de ese momento
 git checkout master -> cambiara el head al ultimo comit de la rama actual
 git merge ramaFuente -> une el codigo de rama fuente al codigo de la rama en la que nos encontremos
-para resolver un conflicto de manera manual , hay que abrir el archivo, modificar los problemas y despues hacer un commit
+    para resolver un conflicto de manera manual , hay que abrir el archivo, modificar los problemas y despues hacer un commit
 git stash -> guarda en una pila un cambio que deseas guardar pero sin pasar al area de staging. Esto permite movernos a otra rama sin perder los cambios que teniamos.
 git stash pop -> permite recuperar los ultimos cambios almacenados en stash , ya que al regresar a una rama donde se habia guardado codigo en stash, este no aparecera en automatico
 git stash list -> permite listar los cambios que tenemos guardados en el stash
@@ -28,7 +30,27 @@ git tag -> permite listar los commit a los que les asignamos una etiqueta (tag)
 git checkout nombreTag -> al igual que si pusieramos el identificador del Commit, esto nos permite ir a ese commit 
 git show nombreTag -> nos muestra el detalle del tag (quien la creo , cuando y a partir de que commit)
 git tag -d nombreTag -> permite eliminar una etiqueta
-git remote -> mustra el repositorio remoto al que esta ligado nuestro repositorio local
-git remote -v -> muestra el detalle del repositorio remoto (nombre y uri)
+git remote -> mustra el repositorio o repositorios remotos a los  que esta ligado nuestro repositorio local
+git remote -v -> muestra el detalle de los  repositorios remotos (nombre y uri)
+git remote add nombreRepositorio Uri -> asocia un repositorio remoto a nuestro repositorio local (el nombre por convencion es origin o upStream) Uri es la url del repositorio
+    se puede tener mas de un repositorio remoto asociado a nuestro repositorio local y se puede hacer push a todos.
+ssh-keygen -t rsa -b 4096 -C "ercruz@minsait.com" -> nos permite crear una key para clonar repositorios vía ssh
+    code .ssh/id_rsa.pub. -> hay que buscar ese archivo, abrirlo y agrregar la key en git hub 
+git fetch origin master -> descarga los cambios de la rama master del repositorio remoto origin pero no los mezcla con nuestro working directory
+git checkout origin/master -> de esta manera podemos ver los cambios descargados
+git merge origin/master -> meszcla los cambios descargados con nuestro repositorio local
+git push --force -> este comando no se hacee xD, ya que sobreescribe (elimina )los commits que esten en remoto y no se hayan bajado a local
+git show identificadorCommit -> nos muestra las difenrencias en los archivos que guardaron en ese Commit
+git diff -> nos muestra las difenrencias que se tienen sin guardar
+git diff commit1 commi2 -> nos muestran las diferencias entre esos commits
+git describe -> nos muestra cuantos commits han sido guardados desde que se creo el ultimo tag anotado
+git cherry-pick identificadorCommit -> nos permite jalar los cambios de un commit de cualquier otra rama  a la rama en la que nos encontremos 
+git rebase -> cambia la base de un conjunto de commits, no se recomienda si ya se hizo push de los commits
+git blsme nombreArchivo -> nos dice quien realizó cambios a un archivo, qué cambio cuando y en que commit 
+git grep palabra -> nos indica si hay un archivo que incluya esa palabra
+git grep -n palabra -> nos indica si hay un archivo que incluya esa palabra, ademas nos indica el nombre del archivo y la linea en que aparece la frase 
+git grep -c -> nos indica cuantas veces se repite la palabra en cada archivo 
+git config --global alias.nombreAlias 'comandos de git'-> nos permite agrupar una instruccion bajo un alias para poder llamarla mas facil
+git push origin master --tags -> --flags permitira subir los tags locales al repositorio remoto
 
 
