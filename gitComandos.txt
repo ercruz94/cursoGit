@@ -11,5 +11,15 @@ git revert "codigop del comit" -> elimina todos lo cambios que se realizaron a p
 git mv archivo6.txt nuevo_nombre ->  cambia el nombre de archivo6 a nuevo_nombre , elimina archivo6 y suve nuevo_nombre a stage
 git branch -> lista las ramas locales
 git branch nombreRama -> crea una nueva rama
+git branch -b nombreRama -> crea una nueva rama y cambia el head hacia esta (es decir nos cambiamos a esa rama)
 git branch -d nombreRama -> elimina la rama
 git branch -m nombreViejo nombreNuevo -> cambia el nombre de una rama
+git checkout identificadorCommit -> cambiara el head al comit especificado y por lo tanto podremos ver el codigo de ese momento
+git checkout master -> cambiara el head al ultimo comit de la rama actual
+git merge ramaFuente -> une el codigo de rama fuente al codigo de la rama en la que nos encontremos
+para resolver un conflicto de manera manual , hay que abrir el archivo, modificar los problemas y despues hacer un commit
+git stash -> guarda en una pila un cambio que deseas guardar pero sin pasar al area de staging. Esto permite movernos a otra rama sin perder los cambios que teniamos.
+git stash pop -> permite recuperar los ultimos cambios almacenados en stash , ya que al regresar a una rama donde se habia guardado codigo en stash, este no aparecera en automatico
+git stash list -> permite listar los cambios que tenemos guardados en el stash
+git stash clear -> permite vaciar la pila del stash, por lo tanto se perderan todos los cambios guardados
+
